@@ -1,0 +1,122 @@
+
+/* blue: #606BA6;
+green: #B3BF54;
+white: #D9D9D9;
+grey:#8C8C8C;
+black:#262626; 
+
+font size(size identified in bootstrap):
+bigg title font: h2;
+small title font: h6;
+all regular text: p
+*/
+
+
+
+/* page body color */
+body{
+    background-color: #f0eeee !important;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #262626;
+}
+
+/* nav bar */
+.ynavColor{
+    color: #B3BF54 !important;
+}
+.ynavColor:hover{
+    font-weight: bold;
+}
+.yiconStyle{
+    cursor: pointer;
+}
+input:focus{
+    outline: none !important;
+    outline:#B3BF54 2px dotted !important; 
+    box-shadow: 0 0 10px #B3BF54 !important;
+}
+
+/* carousel */
+.ycarouselImg .carousel-item img{
+    min-width: 100%;
+    height: 500px;
+    margin-bottom: 15px;
+}
+.ybuttonColor{
+    border: 1px solid #B3BF54 !important;
+    color: #B3BF54 !important;  
+}
+.ybuttonColor:hover{
+    color: white !important;
+    background-color: #B3BF54 !important; 
+    border: 1px solid #B3BF54 !important; 
+}
+.ydropDownMeneColor{
+    background-color: #f0eeee !important;
+}
+.ydropdownButton{
+    background-color: #B3BF54 !important; 
+    border: 1px solid #B3BF54 !important; 
+    color: white !important;
+}
+.ydropdownButton:hover{
+    font-weight: bold;
+}
+.ybuttonOne:hover    
+.ymenuOne,
+.ybuttonTwo:hover    
+.ymenuTwo,
+.ybuttonThree:hover    
+.ymenuThree
+{
+    display: inline-block;
+}
+.ymenuOne,
+.ymenuTwo,
+.ymenuThree
+{
+    margin-top: 0;
+}
+.ybtnCarousel{
+top:100px;
+left: 160px;
+position: absolute !important;
+z-index: 1;
+}
+@media screen and (max-width: 960px){
+    .ybtnCarousel{
+        left: 10px;
+    }
+    #ydropdownButtonThree{
+        margin-top: 2px !important;
+        font-size: 12px !important;
+    }
+    #ydropdownButtonTwo{
+        font-size: 12px !important;
+    }
+
+    #ydropdownButtonOne{
+        margin-bottom: 2px !important;
+        font-size: 12px !important;
+    }
+    .ydropDownMeneColor{
+        font-size: 10px !important;
+    }
+    .ydropdownButton{
+        font-size: 15px !important;
+    }
+    .ycarouselImg .carousel-item img{
+        height: 400px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .ycarouselImg .carousel-item img{
+        height: 600px;
+    }
+}
+.yfontBlue{
+    color: #606BA6;
+}
+.yfontGreen{
+    color: #B3BF54;
+}
