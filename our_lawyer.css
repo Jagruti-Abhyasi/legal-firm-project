@@ -1,21 +1,10 @@
 body{padding: 1rem;}
 
 .container{
-    width: 800px;
+    width: 1200px;
     margin:0 auto;
 }
-.card{
-    background-color: rgb(108, 108, 243);
-    color:white;
-    padding: 1rem;
-    height: auto;
-}
-.cards{
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1rem;
-}
+
 /*screen larger than 600 px, 2 column*/
 @media(min-width: 600px){
     .cards{
@@ -34,4 +23,14 @@ body{padding: 1rem;}
 }
 p{
     text-align: justify;
+}
+.big_img{
+    /*border-radius: 90%;  */
+    border: 1px solid #B3BF54;
+    border-color: #B3BF54; 
+}
+.big_img:hover{
+    /*transform: rotate(90deg);
+    border-radius: 80%;*/
+    border-color: #b3c04d;
 }

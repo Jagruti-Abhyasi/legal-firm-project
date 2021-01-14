@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Lawyer</title>
+    <meta name="description" content="Our lawyer gives the detail of all the lawyer of fimr">
+    <meta name="author" content="Jagruti">
+
     <link rel="stylesheet" href="our_lawyer.css">
+    <link rel="stylesheet" href="homePage.css">
     <link rel=”stylesheet” href=”css/bootstrap.css”>
     <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,11 +16,63 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body class="container">
-    <h1>Our Lawyer</h1>
+<body>
+<div class="container">
+    <!--<div id="header"> </div>-->
+    <!-- navbar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark  fixed-top">
+            <a class="navbar-brand ml-3 py-0" href="#">
+                <div class="logo  mx-0 my-0" style="box-shadow: 2px 2px #B3BF54;">
+                    <img class="logo rounded" style= "width: 90px; border: 2px solid #606BA6;" src="pictures/ylogo12.png" alt="logo">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-5">
+                <li class="nav-item active">
+                <a class="nav-link ynavColor font-weight-bold" href="#">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" >
+                <a class="nav-link ynavColor" href="#">CLINETS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ynavColor" href="#">OUR REACH</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ynavColor" href="#">PEOPLE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ynavColor" href="#">PRACTICES</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle ynavColor" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    V MORE
+                </a>
+                <div class="dropdown-menu ydropDownMeneColor" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item  ynavColor" href="#">Action</a>
+                    <a class="dropdown-item ynavColor" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item ynavColor" href="#">Something else here</a>
+                </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 ybuttonColor" type="submit">Search</button>
+            </form>
+            </div>
+        </nav>
+    </div>
+<br>
+<br>
+    <h2>Our Lawyer</h2>
     <div class="row">
         <div class="col-lg-12">
-            <!--<img src="picture/contact.jpg" class="our_law_big">-->
+            <!--<img src="pictures/contact.jpg" class="our_law_big">-->
             <div id="carosal_law" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carosal_law" data-slide-to="0" class="active"></li>
@@ -48,7 +104,7 @@
     <br>
     <div class="row">
         <div class="col-sm">
-            <p>
+            <p class="text-justify mt-4 yfontBlue">
                 Caught up in Asia-Pacific tensions and the worsening global pandemic, 
                 the legal service market in the Philippines requires strenuous advocacy to 
                 shore up the economy during this year’s troubling financial times. Among the world’s
@@ -62,8 +118,8 @@
 
     <div class="row">
         <div class="col-sm col-md-6 col-lg-3" style="background-color: rgb(222, 239, 241);">
-            <img src="pictures/jrawat_md.jpg">   
-            <p style="font-size: small;">
+            <img src="pictures/jrawat_md.jpg" alt="By Anoop Rawat">   
+            <p class="text-justify mt-4 yfontBlue font-size: small">
                 By Anoop Rawat, Shardul Amarchand Mangaldas & Co
                 Various laws still contain gaps and ambiguities, and reconciliation with the 
                 provisions of the Insolvency and Bankruptcy Code, 2016 becomes a challenging task. 
@@ -72,8 +128,8 @@
             </p> 
         </div>
         <div class="col-sm col-md-6 col-lg-3" style="background-color: rgb(222, 239, 241);">
-            <img src="pictures/jimg_md2.jpg">  
-            <p>
+            <img src="pictures/jimg_md2.jpg" alt="By Laurie Christine">  
+            <p class="text-justify mt-4 yfontBlue font-size: small">
                 Suspension of employment during the pandemic
                 By Laurie Christine P Quiambao, ACCRALAW
                 The honourable secretary of the Department of Labour and Employment has signed 
@@ -82,8 +138,8 @@
             </p>  
         </div>
         <div class="col-lg-3" style="background-color: rgb(222, 239, 241);">
-            <img src="pictures/jimg_md3.jpg">
-            <p>
+            <img src="pictures/jimg_md3.jpg" alt="By Vidisha Garg">
+            <p class="text-justify mt-4 yfontBlue font-size: small">
                 India eases working requirements of patents
                 By Vidisha Garg, Anand and Anand
                 The Patents (Amendment) Rules, 2020 have great significance as they provide huge 
@@ -92,8 +148,8 @@
             </p>    
         </div>
         <div class="col-lg-3" style="background-color: rgb(222, 239, 241);">
-            <img src="pictures/jimg_md4.jpg">    
-            <p>
+            <img src="pictures/jimg_md4.jpg" alt="By John Xia">    
+            <p class="text-justify mt-4 yfontBlue font-size: small">
                 Avoiding TM infringement in cross-border e-commerce
                 By John Xia, Corner Stone & Partners
                 Cross-border e-commerce has become a new point of economic growth yet the contradiction
@@ -106,14 +162,14 @@
     <br>
     <div class="row">
         <div class="col-sm">
-            <p>
+            <p class="text-justify mt-4 yfontBlue">
                 To be one of the Philippines’ top lawyers, you have to be “quite the professional to work with,
                 ” says Keith Ng, project development manager at Clean n Green Energy Solutions, in the Philippines,
                  when describing Maria Raquel Chavez, a partner at Puyat Jacinto & Santos Law Offices (PJS Law). 
                  “Aside from the exemplary work ethic, she has been instrumental in balancing our company’s 
                  risk-taking stance and grounding us with realistic expectations,” he adds.
             </p>
-            <p>
+            <p class="text-justify mt-4 yfontBlue">
                 Shim Suk-sub, president of Welcome Finance, Philippines, has this to say about Chavez: 
                 “She has comprehensive knowledge on the regulations and requirements for the banking and 
                 financial industry in the Philippines.”
@@ -123,17 +179,19 @@
     <br>
     <div class="row">
         <div class="col">
-            <img src="pictures/jlawyer4.jpg" class="img-fluid">
+            <img src="pictures/jlawyer4.jpg" class="img-fluid big_img" alt="Sycip">
         </div>
     </div>
+    <br>
+    
     <div class="row">
         <div class="col-sm">
-            <h3>SYCIP SALAZAR HERNANDEZ & GATMAITAN</h3>
-            <p>
+            <h6>SYCIP SALAZAR HERNANDEZ & GATMAITAN</h6>
+            <p class="text-justify mt-4 yfontBlue">
                 Manila-based Sycip Salazar Hernandez & Gatmaitan (SyCipLaw) is one of the most 
                 recognizable names in the Philippines’ corporate legal market.
             </p>
-            <p>
+            <p class="text-justify mt-4 yfontBlue">
                 SyCipLaw has had a wonderful year, having worked on headline-grabbing deals such as Singaporean 
                 taxing hailing app Grab’s acquisition of US peer Uber’s Southeast Asian business in a deal worth 
                 approximately US$1.6 billion. The firm also worked on the largest ever renewable sector deal, 
@@ -141,18 +199,18 @@
                 SyCipLaw was also the adviser to Union Bank of the Philippines’ rights offering of up to 
                 200 million common shares with an offer size of PHP10 billion (US$190 million).
             </p>
-            <p>
+            <p class="text-justify mt-4 yfontBlue">
                 The Grab-Uber deal, the largest deal of its kind in Southeast Asia, was a landmark case 
                 from a competition and antitrust perspective as it was the only transaction subjected to 
                 a motu proprio review (a case taken for review without notifications from either of the parties) 
                 by the Philippine Competition Commission (PCC). SyCipLaw in co-ordination with Grab developed 
                 voluntary commitments that the PCC accepted through the issuance of its commitment decision.
             </p>
-            <p>
+            <p class="text-justify mt-4 yfontBlue">
                 SyCipLaw also worked in what might well be the only successful Philippines initial public offering 
                 of the year – property developer DM Wenceslao’s US$154 million offering in June 2018.
             </p>
-            <p>
+            <p class="text-justify mt-4 yfontBlue">
                 The firm’s attentiveness to its clients and responsiveness was lauded by respondents to our survey.
                  “SyCipLaw lawyers are very responsive to our concerns, and are good not only in identifying 
                  problem areas, but more importantly, in providing solutions,” says Joan A De Venecia-Fabul, 
@@ -164,14 +222,14 @@
     </div>
     <div class="row">
         <div class="col">
-            <img src="pictures/jCamille.jpg" class="img-fluid">
-            <p>
+            <img src="pictures/jCamille.jpg" class="img-fluid" alt="Camille">
+            <p class="text-justify mt-4 yfontBlue">
                 Estrella Elamparo, senior partner at Divina Law, is “a star litigator”, 
                 says Camille Aromas, the head of legal at Huawei Technologies in the Philippines. 
                 “Her out-of-the-box thinking and creative approach are exactly what in-house counsel 
                 need to win in this business environment.”
             </p>    
-            <p>    
+            <p class="text-justify mt-4 yfontBlue">    
                 Elamparo’s colleague, Alden Francis Gonzales, is praised by Levi de Mesa, president 
                 of land-based recruitment and ship manning company International Skill Development. 
                 “We have been working with him for so many years now, and I found him very approachable,
@@ -179,6 +237,37 @@
             </p>
         </div>
     </div>
-    <script src="our_lawyer.js"></script>    
+    <!--<div id="footer">
+
+    </div>-->
+    <!-- footer -->
+    
+</div>
+
+<footer>
+    <div class="container-fluid text-center mt-5 bg-dark text-light py-2 mt-5">
+        <div class="row justify-content-center"  style = "color: #B3BF54">
+            <div class="col-lg-4 text-center">
+                <p class="mb-1 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Montreal: 123456 Rue Blue, Quebec, P5T 9G8</p>
+                <p class="mb-0 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Toronto: 123456 Rue Blue, Quebec, P5T 9G8</p>
+            </div>
+            <div class="col-lg-3 text-center">
+                <p class="mb-1 text-left yiconStyle"><i class="fas fa-phone-volume mr-2"></i>Tel: 123-456-7890</p>
+                <p class="mb-0 text-left yiconStyle"><i class="far fa-envelope mr-2"></i>Email: sharkLawFirm@gmail.com</p>
+            </div>
+            <div class="col-lg-3 text-center align-middle">
+                <p class="mb-0 mt-2 yiconStyle">
+                    <i class="fab fa-twitter mr-2"></i>
+                    <i class="fab fa-facebook-square mr-2"></i>
+                    <i class="fab fa-linkedin mr-2"></i>
+                    <i class="fab fa-instagram mr-2"></i>
+                    <i class="fas fa-globe"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+    </footer>
+    
+    <script src="our_lawyer.js"></script>
 </body>
 </html>

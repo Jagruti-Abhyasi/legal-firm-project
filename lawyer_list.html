@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer List</title>
+    <meta name="description" content="Find lawyer data from the list using search box..">
+    <meta name="author" content="Jagruti">
+    
+
+    <link rel="stylesheet" href="lawyer_list.css">
+    <link rel="stylesheet" href="homePage.css">
+    <link rel=”stylesheet” href=”css/bootstrap.css”>
+    <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup",function(){
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function(){
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+        });
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg  navbar-dark bg-dark  fixed-top">
+                <a class="navbar-brand ml-3 py-0" href="#">
+                    <div class="logo  mx-0 my-0" style="box-shadow: 2px 2px #B3BF54;">
+                        <img class="logo rounded" style= "width: 90px; border: 2px solid #606BA6;" src="pictures/ylogo12.png" alt="logo">
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-5">
+                    <li class="nav-item active">
+                    <a class="nav-link ynavColor font-weight-bold" href="#">HOME <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" >
+                    <a class="nav-link ynavColor" href="#">CLINETS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ynavColor" href="#">OUR REACH</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ynavColor" href="#">PEOPLE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ynavColor" href="#">PRACTICES</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle ynavColor" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        V MORE
+                    </a>
+                    <div class="dropdown-menu ydropDownMeneColor" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item  ynavColor" href="#">Action</a>
+                        <a class="dropdown-item ynavColor" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item ynavColor" href="#">Something else here</a>
+                    </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 ybuttonColor" type="submit">Search</button>
+                </form>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="main">
+            <h2>Filter Lawyer Data </h2><br>
+            <input id="myInput" type="text" placeholder="Search" class="form-control">
+        </div>
+        <br>
+        <br>
+
+        <div class="bs-example">
+            <table class="table table-bordered table-hover table-striped table-info">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone No</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    <tr>
+                        <td>1</td>
+                        <td>Abdessamad, Tazaroualti </td>
+                        <td>5825, RUE SHERBROOKE EST, SUITE 304, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ablacatoff, Danny</td>
+                        <td>1434 RUE SAINTE-CATHERINE OUEST, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Adams Gareau Avocats</td>
+                        <td> 1000 SHERBROOKE O, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Aguilar, William</td>
+                        <td> 432, RUE BELANGER, MONTREAL, QUEBEC</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Ahmed, Jazouli</td>
+                        <td>5465, CHEMIN QUEEN-MARY, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Akl, Bechara</td>
+                        <td>5316 AVE DU PARC, SUITE 210, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Alain Houle And Associes</td>
+                        <td>1255 UNIVERSITY, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>            
+                    <tr>
+                        <td>8</td>
+                        <td>Alain, Robert</td>
+                        <td>1350 SHERBROOKE O, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Alarie, Legault Henault</td>
+                        <td>507, PLACE D'ARMES, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Alarie, Ronaldo Peter</td>
+                        <td>112, PLACE D'ARMES, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Alexander Ronaldo</td>
+                        <td>111, PLACE D'ARMES, MONTREAL</td>
+                        <td>514-235-4589</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Allen, Joseph W</td>
+                        <td>6855, AVENUE DE L'EPEE, MONTREAL</td>
+                        <td>514-235-5555</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Amar And Associes</td>
+                        <td>625, BOULEVARD RENE-LEVESQUE OUEST, MONTREAL</td>
+                        <td>514-235-1234</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Andre J Noreau And Associes</td>
+                        <td>215 ST JACQUES, MONTREAL</td>
+                        <td>514-111-4589</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Andre Valiquette C R Avocat Inc.</td>
+                        <td>1155, RUE UNIVERSITY, MONTREAL</td>
+                        <td>514-514-4589</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cityList" data-toggle="modal" data-target="#myModal">
+            <h4>City List in quebec....</h4>
+            <div class="row table-info table-bordered">
+                <div class="col-xs-12 col-sm-6 col-lg-3 table_col">
+                    <div>Blainville</div>
+                    <div>Laval</div>
+                    <div>DDO</div>
+                    <div>Pierrefonds</div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-lg-3 table_col">
+                    <div>Drummondville</div>
+                    <div>Gatineau</div>
+                    <div>Granby</div>
+                    <div>Levis</div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-lg-3 table_col">
+                    <div>Longueuil</div>
+                    <div>Marieville</div>
+                    <div>Montreal</div>
+                    <div>Quebec City</div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-6 col-lg-3 table_col">
+                    <div>Repentigny</div>
+                    <div>Riviere-du-Loup</div>
+                    <div>Saint-Hyacinthe</div>
+                    <div>Saint-Jerome</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">City Lowyer Detail</h4>
+            </div>
+            <div class="modal-body">
+            <p>Using this list you will get list of lowyer in your area.</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    
+        </div>
+    </div>
+    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>-->
+
+<!--<script src="lawyer_list.js"></script>-->
+<footer>
+    <div class="container-fluid text-center mt-5 bg-dark text-light py-2 mt-5">
+        <div class="row justify-content-center"  style = "color: #B3BF54">
+            <div class="col-lg-4 text-center">
+                <p class="mb-1 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Montreal: 123456 Rue Blue, Quebec, P5T 9G8</p>
+                <p class="mb-0 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Toronto: 123456 Rue Blue, Quebec, P5T 9G8</p>
+            </div>
+            <div class="col-lg-3 text-center">
+                <p class="mb-1 text-left yiconStyle"><i class="fas fa-phone-volume mr-2"></i>Tel: 123-456-7890</p>
+                <p class="mb-0 text-left yiconStyle"><i class="far fa-envelope mr-2"></i>Email: sharkLawFirm@gmail.com</p>
+            </div>
+            <div class="col-lg-3 text-center align-middle">
+                <p class="mb-0 mt-2 yiconStyle">
+                    <i class="fab fa-twitter mr-2"></i>
+                    <i class="fab fa-facebook-square mr-2"></i>
+                    <i class="fab fa-linkedin mr-2"></i>
+                    <i class="fab fa-instagram mr-2"></i>
+                    <i class="fas fa-globe"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>
