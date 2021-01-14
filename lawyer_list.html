@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawyer List</title>
     <meta name="description" content="Find lawyer data from the list using search box..">
     <meta name="author" content="Jagruti">
-    
 
-    <link rel="stylesheet" href="lawyer_list.css">
-    <link rel="stylesheet" href="homePage.css">
+
+    <!--<link rel="stylesheet" href="lawyer_list.css">-->
+    <style>
+        .table1 {
+            border: 1px solid black;
+            width: auto;
+        }
+
+        .table_col {
+            padding: 5px;
+            font-size: 1.5rem;
+            font-style: initial bold;
+            color: #B3BF54;
+        }
+    </style>
+    <link rel="stylesheet" href="headerfooter.css">
     <link rel=”stylesheet” href=”css/bootstrap.css”>
     <link rel=”stylesheet” href=”css/bootstrap-responsive.css”>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
-    <script>
-        $(document).ready(function(){
-            $("#myInput").on("keyup",function(){
-                var value = $(this).val().toLowerCase();
-                $("#myTable tr").filter(function(){
-                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-        });
-        });
-
-    </script>
 </head>
+
 <body>
     <div class="container">
         <!-- navbar -->
@@ -37,46 +41,51 @@
             <nav class="navbar navbar-expand-lg  navbar-dark bg-dark  fixed-top">
                 <a class="navbar-brand ml-3 py-0" href="#">
                     <div class="logo  mx-0 my-0" style="box-shadow: 2px 2px #B3BF54;">
-                        <img class="logo rounded" style= "width: 90px; border: 2px solid #606BA6;" src="pictures/ylogo12.png" alt="logo">
+                        <img class="logo rounded" style="width: 90px; border: 2px solid #606BA6;" src="ylogo12.png"
+                            alt="logo">
                     </div>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
-            
+
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-5">
-                    <li class="nav-item active">
-                    <a class="nav-link ynavColor font-weight-bold" href="#">HOME <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item" >
-                    <a class="nav-link ynavColor" href="#">CLINETS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ynavColor" href="#">OUR REACH</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ynavColor" href="#">PEOPLE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ynavColor" href="#">PRACTICES</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle ynavColor" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        V MORE
-                    </a>
-                    <div class="dropdown-menu ydropDownMeneColor" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item  ynavColor" href="#">Action</a>
-                        <a class="dropdown-item ynavColor" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item ynavColor" href="#">Something else here</a>
-                    </div>
-                    </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0 ybuttonColor" type="submit">Search</button>
-                </form>
+                    <ul class="navbar-nav mr-5">
+                        <li class="nav-item active">
+                            <a class="nav-link ynavColor font-weight-bold" href="#">HOME <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ynavColor" href="#">CLINETS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ynavColor" href="#">OUR REACH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ynavColor" href="#">PEOPLE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ynavColor" href="#">PRACTICES</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle ynavColor" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                V MORE
+                            </a>
+                            <div class="dropdown-menu ydropDownMeneColor" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item  ynavColor" href="#">Action</a>
+                                <a class="dropdown-item ynavColor" href="#">Another action</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item ynavColor" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0 ybuttonColor" type="submit">Search</button>
+                    </form>
                 </div>
             </nav>
         </div>
@@ -142,7 +151,7 @@
                         <td>Alain Houle And Associes</td>
                         <td>1255 UNIVERSITY, MONTREAL</td>
                         <td>514-235-4589</td>
-                    </tr>            
+                    </tr>
                     <tr>
                         <td>8</td>
                         <td>Alain, Robert</td>
@@ -200,7 +209,7 @@
 
         <div class="cityList" data-toggle="modal" data-target="#myModal">
             <h4>City List in quebec....</h4>
-            <div class="row table-info table-bordered">
+            <div class="row table-info">
                 <div class="col-xs-12 col-sm-6 col-lg-3 table_col">
                     <div>Blainville</div>
                     <div>Laval</div>
@@ -213,14 +222,14 @@
                     <div>Granby</div>
                     <div>Levis</div>
                 </div>
-                
+
                 <div class="col-xs-12 col-sm-6 col-lg-3 table_col">
                     <div>Longueuil</div>
                     <div>Marieville</div>
                     <div>Montreal</div>
                     <div>Quebec City</div>
                 </div>
-                
+
                 <div class="col-xs-12 col-sm-6 col-lg-3 table_col">
                     <div>Repentigny</div>
                     <div>Riviere-du-Loup</div>
@@ -234,51 +243,52 @@
     <!-- Modal -->
     <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-    
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">City Lowyer Detail</h4>
-            </div>
-            <div class="modal-body">
-            <p>Using this list you will get list of lowyer in your area.</p>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    
-        </div>
-    </div>
-    <!--<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>-->
 
-<!--<script src="lawyer_list.js"></script>-->
-<footer>
-    <div class="container-fluid text-center mt-5 bg-dark text-light py-2 mt-5">
-        <div class="row justify-content-center"  style = "color: #B3BF54">
-            <div class="col-lg-4 text-center">
-                <p class="mb-1 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Montreal: 123456 Rue Blue, Quebec, P5T 9G8</p>
-                <p class="mb-0 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Toronto: 123456 Rue Blue, Quebec, P5T 9G8</p>
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">City Lowyer Detail</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Using this list you will get list of lowyer in your area.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="col-lg-3 text-center">
-                <p class="mb-1 text-left yiconStyle"><i class="fas fa-phone-volume mr-2"></i>Tel: 123-456-7890</p>
-                <p class="mb-0 text-left yiconStyle"><i class="far fa-envelope mr-2"></i>Email: sharkLawFirm@gmail.com</p>
-            </div>
-            <div class="col-lg-3 text-center align-middle">
-                <p class="mb-0 mt-2 yiconStyle">
-                    <i class="fab fa-twitter mr-2"></i>
-                    <i class="fab fa-facebook-square mr-2"></i>
-                    <i class="fab fa-linkedin mr-2"></i>
-                    <i class="fab fa-instagram mr-2"></i>
-                    <i class="fas fa-globe"></i>
-                </p>
-            </div>
+
         </div>
     </div>
+
+    <script src="lawyer_list.js"></script>
+    <footer>
+        <div class="container-fluid text-center mt-5 bg-dark text-light py-2 mt-5">
+            <div class="row justify-content-center" style="color: #B3BF54">
+                <div class="col-lg-4 text-center">
+                    <p class="mb-1 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Montreal: 123456 Rue
+                        Blue, Quebec, P5T 9G8</p>
+                    <p class="mb-0 text-left yiconStyle"><i class="fas fa-map-marker-alt mr-2"></i>Toronto: 123456 Rue
+                        Blue, Quebec, P5T 9G8</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <p class="mb-1 text-left yiconStyle"><i class="fas fa-phone-volume mr-2"></i>Tel: 123-456-7890</p>
+                    <p class="mb-0 text-left yiconStyle"><i class="far fa-envelope mr-2"></i>Email:
+                        sharkLawFirm@gmail.com</p>
+                </div>
+                <div class="col-lg-3 text-center align-middle">
+                    <p class="mb-0 mt-2 yiconStyle">
+                        <i class="fab fa-twitter mr-2"></i>
+                        <i class="fab fa-facebook-square mr-2"></i>
+                        <i class="fab fa-linkedin mr-2"></i>
+                        <i class="fab fa-instagram mr-2"></i>
+                        <i class="fas fa-globe"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>
+
 </html>
